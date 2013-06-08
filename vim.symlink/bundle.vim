@@ -42,7 +42,7 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'Raimondi/delimitMate'
 Bundle 'jgdavey/vim-blockle'
-
+Bundle 'jaromero/vim-monokai-refined'
 Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on     " required!

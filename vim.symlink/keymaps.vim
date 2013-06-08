@@ -6,6 +6,17 @@
 "
 vnoremap <BS> d
 
+"
+" Todds additions
+"
+nnoremap ; :
+inoremap ii <Esc>
+set autochdir
+if &t_Co > 2 || has("gui_running")
+	syntax on
+	set hlsearch
+endif
+
 " Control+A is Select All.
 "
 noremap  <C-A>  gggH<C-O>G

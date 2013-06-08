@@ -1,106 +1,147 @@
-bind M-k send-keys -R; clear-history
+# todds config v
 
 
-# shut off mouse
-setw -g mode-mouse off
-
-# center status
-set -g status-justify centre
-
-# turn on utf8
-set -g status-utf8 on
-
-# set color
+set -g prefix C-a
+unbind C-b
+set -s escape-time 1
+bind q source-file ~/.tmux.conf \; display "<=   <=   <=   <=   <=   <=   <=  =  =  =  =  =  =   -     -     -     -     -     ****       __TMUX Config File Reloaded!__     ****     -     -     -     -     -   =  =  =  =  =  =  =>   =>   =>   =>   =>   =>   =>"
+bind C-a send-prefix
+bind \ split-window -h
+bind - split-window -v
+bind -n M-Left resize-pane -L 5
+bind -n M-Right resize-pane -R 5
+bind -n M-Up resize-pane -U 5
+bind -n M-Down resize-pane -D 5
 set -g default-terminal "screen-256color"
-
-# pass through fancy key combos (C-Arrows/S-Arrows)
-set-window-option -g xterm-keys on
-
-# minimize delay
-set -sg escape-time 100
-
-# force a reload of the config file
-unbind r
-bind r source-file ~/.tmux.conf; display "Reloaded"
-
-# quick pane cycling
-bind -r b select-pane -t :.+
-
-# The status bar itself.
-set-window-option -g monitor-activity on
-set-option -g status-left-length 60
-set-option -g status-left "#[fg=black]#H #[fg=black]session:window.pane #[fg=black]#S:#I.#P"
-set-option -g status-right-length 45
-set-option -g status-right "%I:%M %p #[fg=yellow]#[fg=green]#(uptime | cut -d ',' -f 4-)"
-
-# Maximize window
-unbind UP
-bind UP new-window -d -n tmux-zoom \; swap-pane -s tmux-zoom.1 \; select-window -t tmux-zoom
-unbind DOWN
-bind DOWN last-window \; swap-pane -s tmux-zoom.1 \; kill-window -t tmux-zoom
-
-# vim movement
-unbind LEFT
-unbind RIGHT
-bind -r h select-pane -L
-bind -r C-h select-window -t :-
-bind -r j select-pane -D
-bind -r k select-pane -U
-bind -r l select-pane -R
-bind -r C-l select-window -t :+
-
-# vim resizes
-bind -r H resize-pane -L 5
-bind -r J resize-pane -D 5
-bind -r K resize-pane -U 5
-bind -r L resize-pane -R 5
-
-set -g default-command /bin/bash
-set -g default-shell /bin/bash
-unbind %
-unbind '"'
-bind | split-window -h
-bind _ split-window -v
-bind -r - resize-pane -D
-bind -r + resize-pane -U
-bind -r < resize-pane -L
-bind -r > resize-pane -R
-
-# notifications
+set -g status-fg white
+set -g status-bg black
+set -g window-status-fg colour13
+set -g window-status-bg colour238
+set -g pane-border-fg colour54
+set -g pane-border-bg black
+set -g status-left-length 120
+set -g status-right-length 120
+set -g mode-mouse on
+set -g status-justify centre
 setw -g monitor-activity on
-setw -g visual-activity on
-
-# auto rename
-set -g automatic-rename
+set -g visual-activity on
 
 # start window and pane numbering with 1 so left pane is left keyboard key
 set -g base-index 1
 setw -g pane-base-index 1
+set -g display-time 2000
+set -g status-right "#[fg=green]#(~/bin/wifi_signal.sh) #[fg=white]#T #[fg=cyan]%m-%d-%Y #[fg=green]%l:%M "
+set-window-option -g window-status-current-format '#[bg=blue,fg=cyan]#I#[bg=blue,fg=cyan]:#[fg=white]#W#[fg=dim]#F'
+set-window-option -g window-status-format '#[fg=cyan,dim]#I#[fg=blue]:#[default]#W#[fg=grey,dim]#F'
+set -g status-left " #[fg=black]#S #(~/bin/battery Discharging; ~/bin/battery Charging) #(~/bin/battery_discharge.sh) #[fg=blue]#(uptime|cut -d "," -f 2-)"
+set -g status-utf8 on
+
+# todds config ^
+
+#bind M-k send-keys -R; clear-history
+
+
+# shut off mouse
+#setw -g mode-mouse off
+
+# center status
+#set -g status-justify centre
+
+# turn on utf8
+#set -g status-utf8 on
+
+# set color
+#set -g default-terminal "screen-256color"
+
+# pass through fancy key combos (C-Arrows/S-Arrows)
+#set-window-option -g xterm-keys on
+
+# minimize delay
+#set -sg escape-time 100
+
+# force a reload of the config file
+#unbind r
+#bind r source-file ~/.tmux.conf; display "Reloaded"
+
+# quick pane cycling
+#bind -r b select-pane -t :.+
+
+# The status bar itself.
+#set-window-option -g monitor-activity on
+#set-option -g status-left-length 60
+#set-option -g status-left "#[fg=black]#H #[fg=black]session:window.pane #[fg=black]#S:#I.#P"
+#set-option -g status-right-length 45
+#set-option -g status-right "%I:%M %p #[fg=yellow]#[fg=green]#(uptime | cut -d ',' -f 4-)"
+
+# Maximize window
+#unbind UP
+#bind UP new-window -d -n tmux-zoom \; swap-pane -s tmux-zoom.1 \; select-window -t tmux-zoom
+#unbind DOWN
+#bind DOWN last-window \; swap-pane -s tmux-zoom.1 \; kill-window -t tmux-zoom
+
+# vim movement
+#unbind LEFT
+#unbind RIGHT
+#bind -r h select-pane -L
+#bind -r C-h select-window -t :-
+#bind -r j select-pane -D
+#bind -r k select-pane -U
+#bind -r l select-pane -R
+#bind -r C-l select-window -t :+
+
+# vim resizes
+#bind -r H resize-pane -L 5
+#bind -r J resize-pane -D 5
+#bind -r K resize-pane -U 5
+#
+#bind -r L resize-pane -R 5
+
+#set -g default-command /bin/bash
+#set -g default-shell /bin/bash
+#unbind %
+#unbind '"'
+#bind | split-window -h
+#bind _ split-window -v
+#bind -r - resize-pane -D
+#bind -r + resize-pane -U
+#bind -r < resize-pane -L
+#bind -r > resize-pane -R
+
+# notifications
+#setw -g monitor-activity on
+#setw -g visual-activity on
+
+# auto rename
+#set -g automatic-rename
+
+# start window and pane numbering with 1 so left pane is left keyboard key
+#set -g base-index 1
+#setw -g pane-base-index 1
 
 # open a man page in new pane or window
-unbind m
-unbind M
-bind m command-prompt -p "man page:" "split-window -h 'exec man %%'"
-bind M command-prompt -p "Man page:" "new-window -n 'man %1' 'exec man %1'"
+#unbind m
+#unbind M
+#bind m command-prompt -p "man page:" "split-window -h 'exec man %%'"
+#bind M command-prompt -p "Man page:" "new-window -n 'man %1' 'exec man %1'"
 
 # open a ssh in new pane or window
-unbind s
-unbind S
-bind s command-prompt -p "user@server:" "split-window -h 'exec ssh %%'"
-bind S command-prompt -p "user@server:" "new-window -n 'ssh %1' 'exec ssh %1'"
+#unbind s
+#unbind S
+#bind s command-prompt -p "user@server:" "split-window -h 'exec ssh %%'"
+#bind S command-prompt -p "user@server:" "new-window -n 'ssh %1' 'exec ssh %1'"
 
 # vi-style controls in copy mode
-set-option -g status-keys vi
-set-window-option -g mode-keys vi
-bind-key -t vi-copy 'v' begin-selection
-bind-key -t vi-copy 'y' copy-selection
-setw -g mode-keys vi
-unbind [
-bind Escape copy-mode
-unbind p
-unbind ]
-bind p paste-buffer
+#set-option -g status-keys vi
+#set-window-option -g mode-keys vi
+#bind-key -t vi-copy 'v' begin-selection
+#bind-key -t vi-copy 'y' copy-selection
+#setw -g mode-keys vi
+#unbind [
+#bind Escape copy-mode
+#unbind p
+#unbind ]
+#bind p paste-buffer
 
 # put next and previous to [ and ]
-bind -r [ previous-window
-bind -r ] next-window
+#bind -r [ previous-window
+#bind -r ] next-window
