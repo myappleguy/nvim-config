@@ -74,7 +74,9 @@
 [include]
     path = .my_gitconfig
 [user]
-	name = Amos L King
-	email = amos@theablefew.com
+	name = Todd Pickell
+	email = myappleguy@gmail.com
 [core]
-	editor = /usr/bin/vim
+	editor = vim
+[merge]
+	tool = vimdiff

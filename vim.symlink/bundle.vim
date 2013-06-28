@@ -44,5 +44,6 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'jgdavey/vim-blockle'
 Bundle 'jaromero/vim-monokai-refined'
 Bundle 'kien/ctrlp.vim'
+Bundle 'airblade/vim-gitgutter'
 
 filetype plugin indent on     " required!
