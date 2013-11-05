@@ -42,7 +42,13 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'Raimondi/delimitMate'
 Bundle 'jgdavey/vim-blockle'
+<<<<<<< HEAD
 Bundle 'jaromero/vim-monokai-refined'
+=======
+Bundle 'airblade/vim-gitgutter'
+Bundle 'vim-indent-object'
+
+>>>>>>> upstream/master
 Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 

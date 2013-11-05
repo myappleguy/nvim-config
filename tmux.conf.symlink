@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # todds config v
 
 
@@ -41,6 +42,8 @@ set -g status-utf8 on
 #bind M-k send-keys -R; clear-history
 
 
+=======
+>>>>>>> upstream/master
 # shut off mouse
 #setw -g mode-mouse off
 
@@ -73,12 +76,15 @@ set -g status-utf8 on
 #set-option -g status-right-length 45
 #set-option -g status-right "%I:%M %p #[fg=yellow]#[fg=green]#(uptime | cut -d ',' -f 4-)"
 
+<<<<<<< HEAD
 # Maximize window
 #unbind UP
 #bind UP new-window -d -n tmux-zoom \; swap-pane -s tmux-zoom.1 \; select-window -t tmux-zoom
 #unbind DOWN
 #bind DOWN last-window \; swap-pane -s tmux-zoom.1 \; kill-window -t tmux-zoom
 
+=======
+>>>>>>> upstream/master
 # vim movement
 #unbind LEFT
 #unbind RIGHT

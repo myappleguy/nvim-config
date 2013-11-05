@@ -117,15 +117,11 @@ map <leader>n :NERDTreeToggle<CR>
 
 " Unimpaired configuration
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-nmap <C-k> [e
-nmap <C-j> ]e
+nmap <C-k> [e==
+nmap <C-j> ]e==
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-vmap <C-k> [egv
-vmap <C-j> ]egv
+vmap <C-k> [egv==
+vmap <C-j> ]egv==
 
 " Movement up and down when lines are wrapped
 imap <silent> <Down> <C-o>gj
@@ -188,3 +184,30 @@ inoremap jk <esc>l
 inoremap kj <esc>l
 inoremap jj <esc>l
 inoremap kk <esc>l
+
+" Git Gutter Commands
+let g:gitgutter_highlight_lines = 1
+let g:gitgutter_enabled = 0
+nmap <leader>gg :GitGutterToggle<CR>
+
+" Fugitive
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gr :Gread<CR>:w<CR>
+nmap <leader>gp :Git push origin HEAD<CR>
+
+" Ruby helpers
+nmap <leader>rs :w<CR>:! rspec %<CR>
+nmap <leader>r :w<CR>:! ruby %<CR>
+nmap <leader><leader>r :w<CR>:! ruby -Itest %<CR>
+
+" spell check
+nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
+
+" quick save
+nmap <leader>s :w<CR>
+inoremap <leader>s <ESC>:w<CR>
+
+" edit vim configs
+nmap <leader><leader>c :vsp<CR>:e ~/dotfiles/vim.symlink/vimrc.symlink<CR>
+nmap <leader>ab :vsp<CR>:e ~/dotfiles/vim.symlink/abbreviations.vim<CR>
+nmap <leader>km :vsp<CR>:e ~/dotfiles/vim.symlink/keymaps.vim<CR>
