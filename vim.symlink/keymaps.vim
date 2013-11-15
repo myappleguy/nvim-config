@@ -57,7 +57,7 @@ nnoremap <S-F7>  vipJ
 inoremap <S-F7>  <Esc>vipJi
 vnoremap <S-F7>  J
 
-" Tab/Shift+Tab indent/unindent the highlighted block (and maintain the
+" > / <  indent/unindent the highlighted block (and maintain the
 " highlight after changing the indentation). Works for both Visual and Select
 " modes.
 "
