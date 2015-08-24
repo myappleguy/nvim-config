@@ -1,6 +1,3 @@
-[git-pair]
-    authors = Amos King <amos.king@asolutions.com>
-
 [color]
     ui = auto
     interactive = auto
@@ -62,14 +59,9 @@
 [include]
     path = .my_gitconfig
 [user]
-<<<<<<< HEAD
-	name = Todd Pickell
-	email = myappleguy@gmail.com
-=======
-	name = Amos L King
-	email = amos.l.king@gmail.com
->>>>>>> upstream/master
+  name = Todd Pickell
+  email = myappleguy@gmail.com
 [core]
-	editor = vim
+  editor = nvim
 [merge]
-	tool = vimdiff
+  tool = vimdiff
