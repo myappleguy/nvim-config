@@ -9,53 +9,21 @@ vnoremap <BS> d
 "
 " Todds additions
 "
+tnoremap <Esc><leader> <C-\><C-n>
 nnoremap ; :
+nnoremap <space> i<space><Esc>
 inoremap ii <Esc>
 set autochdir
 if &t_Co > 2 || has("gui_running")
-	syntax on
-	set hlsearch
+  syntax on
+  set hlsearch
 endif
 
-" Control+A is Select All.
-"
-noremap  <C-A>  gggH<C-O>G
-inoremap <C-A>  <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A>  <C-C>gggH<C-O>G
-onoremap <C-A>  <C-C>gggH<C-O>G
-snoremap <C-A>  <C-C>gggH<C-O>G
-xnoremap <C-A>  <C-C>ggVG
-
-" Control+S saves the current file (if it's been changed).
-"
-noremap  <C-S>  :update<CR>
-vnoremap <C-S>  <C-C>:update<CR>
-inoremap <C-S>  <C-O>:update<CR>
-
-" Control+Z is Undo, in Normal and Insert mode.
-"
-noremap  <C-Z>  u
-inoremap <C-Z>  <C-O>u
 
 " F2 inserts the date and time at the cursor.
 "
 inoremap <F2>   <C-R>=strftime("%c")<CR>
 nmap     <F2>   a<F2><Esc>
-
-" F7 formats the current/highlighted paragraph.
-"
-" XXX: Consider changing this to gwap to maintain logical cursor position.
-"
-nnoremap <F7>   gqap
-inoremap <F7>   <C-O>gqap
-vnoremap <F7>   gq
-
-" Shift+F7 joins all lines of the current paragraph or highlighted block
-" into a single line.
-"
-nnoremap <S-F7>  vipJ
-inoremap <S-F7>  <Esc>vipJi
-vnoremap <S-F7>  J
 
 " > / <  indent/unindent the highlighted block (and maintain the
 " highlight after changing the indentation). Works for both Visual and Select
@@ -102,18 +70,12 @@ nnoremap g#  g#zz
 imap <C-F>  <C-O><C-F>
 imap <C-B>  <C-O><C-B>
 
-" Q formats the current/highlighted paragraph.
-nnoremap Q  gwap
-xnoremap Q  gw
-vnoremap Q  gw
-
-" Make page-forward and page-backward work in insert mode.
-"
-inoremap <C-F>  <C-O><C-F>
-inoremap <C-B>  <C-O><C-B>
 
 " Turn On/Off NERDTree
 map <leader>n :NERDTreeToggle<CR>
+
+" open zshell in neovim
+map <leader>zs :terminal /bin/zsh<CR>
 
 " Unimpaired configuration
 " Bubble single lines
@@ -140,14 +102,10 @@ map <Leader><Leader> :ZoomWin<CR>
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
 
-map <Leader>nf :NERDTreeFind<CR>
-
-inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
+
 let g:ragtag_global_maps = 1
-
 let g:SuperTabDefaultCompletionType = "context"
-
 let g:user_zen_expandabbr_key = '<c-z>'
 
 " Mapping for toggling between block wrappers
@@ -159,16 +117,6 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 " Ctrl-Shift-F for Ack
   map <C-F> :Ack<space>
 
-" Alt-/ to toggle comments
-  map <A-/> <plug>NERDCommenterToggle<CR>
-  imap <A-/> <Esc><plug>NERDCommenterToggle<CR>i
-  map /  <plug>NERDCommenterToggle<CR>
-  imap /  <Esc><plug>NERDCommenterToggle<CR>i
-
-" Alt-][ to increase/decrease indentation
-  vmap <A-]> >gv
-  vmap <A-[> <gv
-
 " Ctrl-Option-ArrowKey to switch viewports
   map <C-S-Up> <C-w>k
   imap <C-S-Up> <Esc> <C-w>k
@@ -178,12 +126,6 @@ nnoremap <silent> <F8> :TlistToggle<CR>
   imap <C-S-Right> <Esc> <C-w>l
   map <C-S-Left> <C-w>h
   imap <C-S-Left> <C-w>h
-
-" Map j/k combos to get out of insert mode
-inoremap jk <esc>l
-inoremap kj <esc>l
-inoremap jj <esc>l
-inoremap kk <esc>l
 
 " Git Gutter Commands
 let g:gitgutter_highlight_lines = 1
@@ -203,11 +145,8 @@ nmap <leader><leader>r :w<CR>:! ruby -Itest %<CR>
 " spell check
 nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
 
-" quick save
-nmap <leader>s :w<CR>
-inoremap <leader>s <ESC>:w<CR>
-
 " edit vim configs
-nmap <leader><leader>c :vsp<CR>:e ~/dotfiles/vim.symlink/vimrc.symlink<CR>
-nmap <leader>ab :vsp<CR>:e ~/dotfiles/vim.symlink/abbreviations.vim<CR>
-nmap <leader>km :vsp<CR>:e ~/dotfiles/vim.symlink/keymaps.vim<CR>
+nmap <leader>vm :vsp<CR>:e ~/code/dotfiles/vim.symlink/vimrc.symlink<CR>
+nmap <leader>ab :vsp<CR>:e ~/code/dotfiles/vim.symlink/abbreviations.vim<CR>
+nmap <leader>km :vsp<CR>:e ~/code/dotfiles/vim.symlink/keymaps.vim<CR>
+nmap <leader>plg :vsp<CR>:e ~/code/dotfiles/vim.symlink/plug.vim<CR>

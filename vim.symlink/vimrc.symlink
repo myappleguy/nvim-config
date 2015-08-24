@@ -7,12 +7,14 @@ aug END
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-source $HOME/.vim/bundle.vim
+source $HOME/.vim/plug.vim
+
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 let mapleader = ','
 syntax enable
 
-colorscheme Monokai-Refined
+colorscheme tesla
 set t_Co=256
 " Set console highlights to be readable with black background
 set bg=dark
@@ -88,7 +90,7 @@ let g:CommandTMaxHeight=20
 
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 
 " Directories for swp files
 set backupdir=~/.vim/backup
