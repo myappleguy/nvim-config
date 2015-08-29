@@ -81,9 +81,7 @@ set whichwrap+=<,>,[,]
 set listchars=tab:>-,trail:·
 set list
 
-" Update the swap file every 20 characters. I don't like to lose stuff.
-"
-set updatecount=20
+set noswapfile
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
@@ -91,6 +89,20 @@ let g:CommandTMaxHeight=20
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set statusline+=%{fugitive#statusline()}
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" for vim test
+let test#strategy = "neovim"
+
+" for emoji
+set completefunc=emoji#complete
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -98,6 +110,8 @@ set directory=~/.vim/backup
 
 " Turn off jslint errors by default
 let g:JSLintHighlightErrorLine = 0
+
+let g:mustache_abbreviations = 1
 
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 let macvim_hig_shift_movement = 1

@@ -60,7 +60,7 @@
     path = .my_gitconfig
 [user]
   name = Todd Pickell
-  email = myappleguy@gmail.com
+  email = tapickell@gmail.com
 [core]
   editor = nvim
 [merge]

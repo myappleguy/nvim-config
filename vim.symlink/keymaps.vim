@@ -131,6 +131,12 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 let g:gitgutter_highlight_lines = 1
 let g:gitgutter_enabled = 0
 nmap <leader>gg :GitGutterToggle<CR>
+silent! if emoji#available()
+  let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+  let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+  let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+  let g:gitgutter_sign_modified_removed = emoji#for('collision')
+endif
 
 " Fugitive
 nmap <leader>gs :Gstatus<CR>

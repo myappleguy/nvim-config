@@ -1,38 +1,40 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-haml', { 'for': 'haml' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'tpope/vim-markdown', { 'for': 'markdown' }
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-surround'
-Plug 'mileszs/ack.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'taglist.vim'
-Plug 'tsaleh/vim-align'
-Plug 'timcharper/textile.vim'
-Plug 'ervandew/supertab'
-Plug 'ZoomWin'
-Plug 'msanders/snipmate.vim'
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffeescript' }
-Plug 'sjl/gundo.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'benekastah/neomake'
 Plug 'cperl82/bufexplorer'
 Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
-Plug 'Raimondi/delimitMate'
-Plug 'jgdavey/vim-blockle'
-Plug 'vim-indent-object'
-Plug 'airblade/vim-gitgutter'
+Plug 'ervandew/supertab'
 Plug 'flazz/vim-colorschemes'
 Plug 'janko-m/vim-test'
-Plug 'benekastah/neomake'
+Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'junegunn/vim-emoji'
-Plug 'xolox/vim-misc'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mileszs/ack.vim'
+Plug 'moll/vim-node'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'myappleguy/jshint.vim', { 'for': 'javascript' }
+Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'sjl/gundo.vim'
+Plug 'taglist.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-haml', { 'for': 'haml' }
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tsaleh/vim-align'
+Plug 'vim-indent-object'
+Plug 'vim-scripts/matchit.zip'
 Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
 Plug 'xolox/vim-session'
+Plug 'ZoomWin'
 
 call plug#end()

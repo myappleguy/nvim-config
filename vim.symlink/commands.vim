@@ -65,6 +65,9 @@ autocmd User fugitive if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' | nnor
 " delete the fugitive buffer when you leave it
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
+" for running nemoke on write
+autocmd! BufWritePost * Neomake
+
 " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
