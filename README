@@ -1,4 +1,4 @@
 # Installation:
 
-git clone https://github.com/myappleguy/dotfiles.git ~/dotfiles/
+git clone https://github.com/myappleguy/nvim-config.git ~/dotfiles/
 cd ~/dotfiles/ && rake
