@@ -6,3 +6,4 @@ vim.symlink/nerdtree_plugin/
 vim.symlink/plugin/
 vim.symlink/syntax/
 .netrwhist
+plugged/
