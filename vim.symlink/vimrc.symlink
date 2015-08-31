@@ -1,7 +1,7 @@
 aug AutoloadVimrc
   au!
-  au BufWritePost ~/dotfiles/vim.symlink/vimrc.symlink source $MYVIMRC
-  au BufWritePost ~/dotfiles/vim.symlink/*.vim source $MYVIMRC
+  au BufWritePost ~/code/dotfiles/vim.symlink/vimrc.symlink source $MYVIMRC
+  au BufWritePost ~/code/dotfiles/vim.symlink/*.vim source $MYVIMRC
 aug END
 
 set nocompatible               " be iMproved
@@ -51,7 +51,6 @@ set tabstop=2           " Set the visible width of tabs.
 set softtabstop=2       " Edit as if tabs are 4 characters wide.
 set shiftwidth=2        " Number of spaces to use for indent and unindent.
 set shiftround          " Round indent to a multiple of 'shiftwidth'.
-set showcmd             " Letting me know I'm in 'leader' mode
 
 set wildmode=list:longest,full
 set wildmenu
@@ -100,6 +99,9 @@ let g:syntastic_check_on_wq = 0
 
 " for vim test
 let test#strategy = "neovim"
+
+" for delimate to expand on return for JS
+let delimitMate_expand_cr = 2
 
 " for emoji
 set completefunc=emoji#complete

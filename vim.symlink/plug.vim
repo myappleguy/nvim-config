@@ -6,6 +6,7 @@ Plug 'benekastah/neomake'
 Plug 'cperl82/bufexplorer'
 Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
 Plug 'ervandew/supertab'
+Plug 'elixir-lang/vim-elixir'
 Plug 'flazz/vim-colorschemes'
 Plug 'janko-m/vim-test'
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
