@@ -145,8 +145,14 @@ nmap <leader><leader>r :w<CR>:! ruby -Itest %<CR>
 " spell check
 nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
 
+if has('nvim')
+    nnoremap <leader>m :rightbelow vertical split <bar> :term make<cr>
+endif
+
 " edit vim configs
 nmap <leader>vm :vsp<CR>:e ~/code/dotfiles/vim.symlink/vimrc.symlink<CR>
+nmap <leader>nvm :vsp<CR>:e ~/.nvimrc<CR>
 nmap <leader>ab :vsp<CR>:e ~/code/dotfiles/vim.symlink/abbreviations.vim<CR>
 nmap <leader>km :vsp<CR>:e ~/code/dotfiles/vim.symlink/keymaps.vim<CR>
+nmap <leader>ft :vsp<CR>:e ~/code/dotfiles/vim.symlink/filetypes.vim<CR>
 nmap <leader>plg :vsp<CR>:e ~/code/dotfiles/vim.symlink/plug.vim<CR>

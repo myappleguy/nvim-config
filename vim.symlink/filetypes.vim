@@ -30,3 +30,4 @@ au BufNewFile,BufRead *.json set ft=javascript
 
 au BufRead,BufNewFile *.txt call s:setupWrapping()
 
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
