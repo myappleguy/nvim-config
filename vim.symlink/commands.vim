@@ -31,23 +31,6 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 " Write all files when focus lost (like TextMate does it)
 " au FocusLost *  :silent wa
 
-" Strip trailing whitespace
-function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
-endfunction
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
-" Write all files when focus lost (like TextMate does it)
-" au FocusLost *  :silent wa
-
 " Mapping for toggling between block wrappers
 let g:blockle_mapping = '<Leader>bl'
 

@@ -14,10 +14,9 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 let mapleader = ','
 syntax enable
 
-colorscheme tesla
+colorscheme tender
 set t_Co=256
-" Set console highlights to be readable with black background
-set bg=dark
+set background=dark
 
 " Make GUI colors light on dark
 hi Normal guibg=black guifg=white
@@ -86,16 +85,19 @@ set noswapfile
 let g:CommandTMaxHeight=20
 
 " Enable syntastic syntax checking
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_messages = {'level': 'warnings'}
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"let g:syntastic_enable_signs=1
+"let g:syntastic_quiet_messages = {'level': 'warnings'}
+set statusline=%f
 set statusline+=%{fugitive#statusline()}
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_javascript_checkers = ['eslint']
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " for vim test
 let test#strategy = "neovim"
@@ -112,7 +114,6 @@ set directory=~/.vim/backup
 
 let g:javascript_enable_domhtmlcss = 1
 let g:jsx_ext_required = 0
-let g:syntastic_javascript_checkers = ['eslint']
 
 let g:mustache_abbreviations = 1
 

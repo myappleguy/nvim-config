@@ -10,6 +10,7 @@ vnoremap <BS> d
 " Todds additions
 "
 tnoremap <Esc><leader> <C-\><C-n>
+map <leader>f :FZF<CR>
 nnoremap ; :
 nnoremap <space> i<space><Esc>
 inoremap ii <Esc>
