@@ -1,6 +1,6 @@
 # Set git autocompletion and PS1 integration
-if [ -f /Users/amos/.git_completion.bash ]; then
-  . /Users/amos/.git_completion.bash
+if [ -f /home/pklx/code/nvim-config/.git_completion.bash ]; then
+  . /home/pklx/code/nvim-config/.git_completion.bash
 fi
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true

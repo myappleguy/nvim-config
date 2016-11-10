@@ -1,7 +1,7 @@
 aug AutoloadVimrc
   au!
-  au BufWritePost ~/code/dotfiles/vim.symlink/vimrc.symlink source $MYVIMRC
-  au BufWritePost ~/code/dotfiles/vim.symlink/*.vim source $MYVIMRC
+  au BufWritePost ~/code/nvim-config/vim.symlink/vimrc.symlink source $MYVIMRC
+  au BufWritePost ~/code/nvim-config/vim.symlink/*.vim source $MYVIMRC
 aug END
 
 set nocompatible               " be iMproved

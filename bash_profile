@@ -3,8 +3,8 @@
 export PATH=/usr/local/bin:$PATH
 export EDITOR=nvim
 
-source ~/dotfiles/git_completion.bash
-source ~/dotfiles/git_prompt
-source ~/dotfiles/aliases.bash
+source ~/code/nvim-config/git_completion.bash
+source ~/code/nvim-config/git_prompt
+source ~/code/nvim-config/aliases.bash
 
 set -o vi

@@ -86,6 +86,8 @@ nmap <C-j> ]e==
 vmap <C-k> [egv==
 vmap <C-j> ]egv==
 
+vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
+
 " Movement up and down when lines are wrapped
 imap <silent> <Down> <C-o>gj
 imap <silent> <Up> <C-o>gk
