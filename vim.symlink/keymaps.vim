@@ -9,7 +9,7 @@ vnoremap <BS> d
 "
 " Todds additions
 "
-tnoremap <Esc><leader> <C-\><C-n>
+"tnoremap <Esc><leader> <C-\><C-n>
 map <leader>f :FZF<CR>
 nnoremap ; :
 nnoremap <space> i<space><Esc>
@@ -153,9 +153,9 @@ if has('nvim')
 endif
 
 " edit vim configs
-nmap <leader>vm :vsp<CR>:e ~/code/dotfiles/vim.symlink/vimrc.symlink<CR>
+nmap <leader>vm :vsp<CR>:e ~/code/nvim-config/vim.symlink/vimrc.symlink<CR>
 nmap <leader>nvm :vsp<CR>:e ~/.nvimrc<CR>
-nmap <leader>ab :vsp<CR>:e ~/code/dotfiles/vim.symlink/abbreviations.vim<CR>
-nmap <leader>km :vsp<CR>:e ~/code/dotfiles/vim.symlink/keymaps.vim<CR>
-nmap <leader>ft :vsp<CR>:e ~/code/dotfiles/vim.symlink/filetypes.vim<CR>
-nmap <leader>plg :vsp<CR>:e ~/code/dotfiles/vim.symlink/plug.vim<CR>
+nmap <leader>ab :vsp<CR>:e ~/code/nvim-config/vim.symlink/abbreviations.vim<CR>
+nmap <leader>km :vsp<CR>:e ~/code/nvim-config/vim.symlink/keymaps.vim<CR>
+nmap <leader>ft :vsp<CR>:e ~/code/nvim-config/vim.symlink/filetypes.vim<CR>
+nmap <leader>plg :vsp<CR>:e ~/code/nvim-config/vim.symlink/plug.vim<CR>
