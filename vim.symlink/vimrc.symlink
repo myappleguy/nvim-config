@@ -4,6 +4,7 @@ aug AutoloadVimrc
   au BufWritePost ~/code/dotfiles/vim.symlink/*.vim source $MYVIMRC
 aug END
 
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -95,6 +96,22 @@ set statusline+=%{fugitive#statusline()}
 "let g:syntastic_check_on_wq = 0
 "let g:syntastic_javascript_checkers = ['eslint']
 
+let g:neomake_verbose=3
+"let g:neomake_logfile="neomake.log"
+let g:neomake_list_height=10
+autocmd! BufWritePost * Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
+"let g:neomake_open_list = 1
+"let g:neomake_javascript_eslint_maker = {
+    "\ 'args': ['--no-color', '--format', 'compact'],
+    "\ 'errorformat': '%f: line %l\, col %c\, %m'
+    "\ }
+
+let g:neomake_place_signs=3
+let g:neomake_info_sign={'text': '💭 '}
+let g:neomake_warning_sign={'text': '💩 '}
+let g:neomake_error_sign={'text': '🚫 '}
+
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -106,7 +123,7 @@ let test#strategy = "neovim"
 let delimitMate_expand_cr = 2
 
 " for emoji
-set completefunc=emoji#complete
+" set completefunc=emoji#complete
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -119,6 +136,15 @@ let g:mustache_abbreviations = 1
 
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 let macvim_hig_shift_movement = 1
+
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+
+let g:rainbow_active = 1
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim

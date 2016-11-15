@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'benekastah/neomake'
+Plug 'neomake/neomake'
 Plug 'cperl82/bufexplorer'
 Plug 'ervandew/supertab'
 Plug 'flazz/vim-colorschemes'
@@ -14,7 +14,6 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
 Plug 'taglist.vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -34,5 +33,13 @@ Plug 'jacoborus/tender'
 Plug 'zefei/vim-colortuner'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-scripts/keepcase.vim'
+Plug 'strogonoff/vim-coffee-script'
+Plug 'aerosol/vim-compot'
+Plug 'lambdatoast/elm.vim'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'luochen1990/rainbow'
+Plug 'elixir-lang/vim-elixir'
+Plug 'thinca/vim-ref'
+Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
 
 call plug#end()
